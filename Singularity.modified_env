@@ -14,6 +14,7 @@ From: ubuntu:latest
 	wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 	bash Anaconda3-5.1.0-Linux-x86_64.sh -f -b -p $HOME/anaconda
 	echo "export PATH="$HOME/anaconda/bin:$PATH"" >> $SINGULARITY_ENVIRONMENT
+	export PATH="$HOME/anaconda/bin:$PATH"
 
 	conda update -y conda
 	pip install --upgrade tensorflow
